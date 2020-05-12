@@ -258,11 +258,11 @@ public class NodeFragment extends Fragment
                     }
                 });
                 // also seed with loki seed nodes (see p2p/net_node.inl:410 in loki src)
-                seedList.add(new NodeInfo(new InetSocketAddress("116.203.192.12", 22022)));
-                seedList.add(new NodeInfo(new InetSocketAddress("149.56.165.115", 22022)));
-                seedList.add(new NodeInfo(new InetSocketAddress("192.250.236.196", 22022)));
-                seedList.add(new NodeInfo(new InetSocketAddress("144.217.243.15", 22022)));
-                seedList.add(new NodeInfo(new InetSocketAddress("51.38.133.145", 22022)));
+                seedList.add(new NodeInfo(new InetSocketAddress("94.177.172.162", 32022)));
+                seedList.add(new NodeInfo(new InetSocketAddress("188.165.237.47", 32022)));
+                seedList.add(new NodeInfo(new InetSocketAddress("80.211.228.157", 32022)));
+                seedList.add(new NodeInfo(new InetSocketAddress("80.211.167.27", 32022)));
+                seedList.add(new NodeInfo(new InetSocketAddress("51.38.133.145", 32022)));
                 d.seedPeers(seedList);
                 d.awaitTermination(NODES_TO_FIND);
             }

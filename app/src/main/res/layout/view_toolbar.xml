@@ -41,7 +41,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:visibility="visible"
-                tools:text="Loki Wallet" />
+                tools:text="Coinicles Wallet" />
 
             <TextView
                 android:id="@+id/toolbarSubtitle"
@@ -50,7 +50,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:visibility="invisible"
-                tools:text="Loki Wallet" />
+                tools:text="Coinicles Wallet" />
 
         </LinearLayout>
     </FrameLayout>

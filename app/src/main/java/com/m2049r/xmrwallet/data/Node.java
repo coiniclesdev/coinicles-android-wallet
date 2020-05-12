@@ -296,7 +296,7 @@ public class Node {
         if (DEFAULT_LEVIN_PORT > 0) return DEFAULT_LEVIN_PORT;
         switch (WalletManager.getInstance().getNetworkType()) {
             case NetworkType_Mainnet:
-                DEFAULT_LEVIN_PORT = 22022;
+                DEFAULT_LEVIN_PORT = 32022;
                 break;
             case NetworkType_Testnet:
                 DEFAULT_LEVIN_PORT = 38156;
@@ -317,7 +317,7 @@ public class Node {
         if (DEFAULT_RPC_PORT > 0) return DEFAULT_RPC_PORT;
         switch (WalletManager.getInstance().getNetworkType()) {
             case NetworkType_Mainnet:
-                DEFAULT_RPC_PORT = 22023;
+                DEFAULT_RPC_PORT = 32023;
                 break;
             case NetworkType_Testnet:
                 DEFAULT_RPC_PORT = 38157;

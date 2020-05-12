@@ -33,7 +33,7 @@ import timber.log.Timber;
 public class Wallet {
 
     public static final long SMALLEST_UNITS_IN_LOK = 1000000000L;
-    public static final String LOKI_SYMBOL = "LOKI";
+    public static final String LOKI_SYMBOL = "CICO";
 
     final static public long SWEEP_ALL = Long.MAX_VALUE;
 

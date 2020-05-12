@@ -86,8 +86,8 @@ public class Helper {
     static public final String BASE_CRYPTO = Wallet.LOKI_SYMBOL;
     static public final String NOCRAZYPASS_FLAGFILE = ".nocrazypass";
 
-    static private final String WALLET_DIR = "loki-wallet" + FLAVOR_SUFFIX;
-    static private final String HOME_DIR = "loki" + FLAVOR_SUFFIX;
+    static private final String WALLET_DIR = "coinicles-wallet" + FLAVOR_SUFFIX;
+    static private final String HOME_DIR = "coinicles" + FLAVOR_SUFFIX;
 
     static public int DISPLAY_DIGITS_INFO = 5;
 
@@ -188,7 +188,7 @@ public class Helper {
     }
 
     static public BigDecimal getDecimalAmount(long amount) {
-        // Loki - All amounts need to be divided by 10e8
+        // Coinicles - All amounts need to be divided by 10e8
         return new BigDecimal(amount).scaleByPowerOfTen(-9);
     }
 
@@ -358,7 +358,7 @@ public class Helper {
     // TODO make the log levels refer to the  WalletManagerFactory::LogLevel enum ?
     static public void initLogger(Context context, int level) {
         String home = getStorage(context, HOME_DIR).getAbsolutePath();
-        WalletManager.initLogger(home + "/loki-wallet", "loki-wallet.log");
+        WalletManager.initLogger(home + "/coinicles-wallet", "coinicles-wallet.log");
         if (level >= WalletManager.LOGLEVEL_SILENT)
             WalletManager.setLogLevel(level);
     }

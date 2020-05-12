@@ -353,7 +353,7 @@ public class ExchangeView extends LinearLayout {
             }
             tvAmountB.setText(xmrAmount);
         } else { // no LOKI currency - cannot happen!
-            Timber.e("No LOKI currency!");
+            Timber.e("No COINICLES currency!");
             setXmr(null);
             notXmrAmount = null;
             return;
@@ -379,7 +379,7 @@ public class ExchangeView extends LinearLayout {
                     setXmr(null);
                     notXmrAmount = cleanAmount;
                 } else { // no LOKI currency - cannot happen!
-                    Timber.e("No LOKI currency!");
+                    Timber.e("No COINICLES currency!");
                     setXmr(null);
                     notXmrAmount = null;
                     return false;

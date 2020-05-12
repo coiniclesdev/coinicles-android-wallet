@@ -39,7 +39,7 @@ import okhttp3.Response;
 import timber.log.Timber;
 
 public class ExchangeApiImpl implements ExchangeApi {
-    static final String LOKI_CRYPTO_ID = "loki-network";
+    static final String LOKI_CRYPTO_ID = "coinicles-network";
 
     @NonNull
     private final OkHttpClient okHttpClient;

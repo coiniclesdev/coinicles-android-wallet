@@ -260,7 +260,7 @@ public class SendAddressWizardFragment extends SendWizardFragment {
                         Helper.hideKeyboard(getActivity());
                     } else {
                         etAddress.setError(getString(R.string.send_address_not_openalias));
-                        Timber.d("NO LOKI OPENALIAS TXT FOUND");
+                        Timber.d("NO COINICLES OPENALIAS TXT FOUND");
                     }
                 }
 

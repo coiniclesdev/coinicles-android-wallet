@@ -140,7 +140,7 @@ public class NodeInfo extends Node {
     }
 
     public boolean isValid() {
-        boolean versionValid = (majorVersion >= 14);
+        boolean versionValid = (majorVersion >= 12);
         return isSuccessful() && versionValid && (responseTime < Double.MAX_VALUE);
     }
 
@@ -247,7 +247,7 @@ public class NodeInfo extends Node {
         return false;
     }
 
-    static final private int[] TEST_PORTS = {22023}; // check only opt-in port
+    static final private int[] TEST_PORTS = {32023}; // check only opt-in port
 
     public boolean findRpcService() {
         // if already have an rpcPort, use that

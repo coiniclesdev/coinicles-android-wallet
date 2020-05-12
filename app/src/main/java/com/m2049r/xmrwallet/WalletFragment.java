@@ -213,13 +213,13 @@ public class WalletFragment extends Fragment implements TransactionInfoAdapter.O
 
     void updateBalance() {
         if (isExchanging) return; // wait for exchange to finish - it will fire this itself then.
-        // at this point selection is LOKI in case of error
+        // at this point selection is Coinicles in case of error
         String displayB;
         double amountA = Helper.getDecimalAmount(unlockedBalance).doubleValue();
-        if (!Helper.BASE_CRYPTO.equals(balanceCurrency)) { // not LOKI
+        if (!Helper.BASE_CRYPTO.equals(balanceCurrency)) { // not COINICLES
             double amountB = amountA * balanceRate;
             displayB = Helper.getFormattedAmount(amountB, false);
-        } else { // LOKI
+        } else { // COINICLES
             displayB = Helper.getFormattedAmount(amountA, true);
         }
         showBalance(displayB);
@@ -228,10 +228,10 @@ public class WalletFragment extends Fragment implements TransactionInfoAdapter.O
     void refreshBalance() {
         double unconfirmedXmr = Helper.getDecimalAmount(balance - unlockedBalance).doubleValue();
         showUnconfirmed(unconfirmedXmr);
-        if (sCurrency.getSelectedItemPosition() == 0) { // XMR
+        if (sCurrency.getSelectedItemPosition() == 0) { // CICO
             double amountXmr = Helper.getDecimalAmount(unlockedBalance).doubleValue();
             showBalance(Helper.getFormattedAmount(amountXmr, true));
-        } else { // not XMR
+        } else { // not CICO
             String currency = (String) sCurrency.getSelectedItem();
             Timber.d(currency);
             if (!currency.equals(balanceCurrency) || (balanceRate <= 0)) {
@@ -283,7 +283,7 @@ public class WalletFragment extends Fragment implements TransactionInfoAdapter.O
     public void exchange(final ExchangeRate exchangeRate) {
         hideExchanging();
         if (!Helper.BASE_CRYPTO.equals(exchangeRate.getBaseCurrency())) {
-            Timber.e("Not LOKI");
+            Timber.e("Not COINICLES");
             sCurrency.setSelection(0, true);
             balanceCurrency = Helper.BASE_CRYPTO;
             balanceRate = 1.0;
